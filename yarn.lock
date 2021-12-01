@@ -3422,9 +3422,9 @@ content-type@^1.0.4, content-type@~1.0.4:
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 contentful-management@^7.5.1:
-  version "7.45.3"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.45.3.tgz#bbd44c6771da0a25e6573fc5fa5d6c1e05ce1d23"
-  integrity sha512-0qdWfyojVOVydglMmJYcTStORSwviJqLR2HNXddOhUYPX8JsGerQhpOTM+yjA+ubogvB+SGuWxJ3bQETsfGEGg==
+  version "7.45.4"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.45.4.tgz#5da016b9ae66cba4dee3b9dc689d0021f105fada"
+  integrity sha512-kw3qCrfhT9IMvUEYWz0IZdJDCZJ/GoOnOrj1c/t/FlH6C8WfnEhGn3uZLzdbtOwXzU0oZzgNPTqlUz33l3S2Uw==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.4"
@@ -10695,9 +10695,9 @@ sync-fetch@0.3.0:
     node-fetch "^2.6.1"
 
 table@^6.0.9:
-  version "6.7.4"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.7.4.tgz#95be16324dff8ca6c57c8aa3f61f96821f5d75ef"
-  integrity sha512-3veWX5gu4cpqDJF9e3x8a9dpir70Dvn9BwOZLOjhPetDF4jukhJJjhGZK1WJeeOzkIolgNr+kOwzhijJ5asjww==
+  version "6.7.5"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.7.5.tgz#f04478c351ef3d8c7904f0e8be90a1b62417d238"
+  integrity sha512-LFNeryOqiQHqCVKzhkymKwt6ozeRhlm8IL1mE8rNUurkir4heF6PzMyRgaTa4tlyPTGGgXuvVOF/OLWiH09Lqw==
   dependencies:
     ajv "^8.0.1"
     lodash.truncate "^4.4.2"
