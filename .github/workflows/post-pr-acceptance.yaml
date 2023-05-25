@@ -1,0 +1,25 @@
+########################################################################################################################
+##                                                                                                                    ##
+## This github workflow file is part of the Platform.sh process of updating and maintaining our collection of         ##
+## templates. For more information see https://github.com/platformsh-templates/ghrw-templates                         ##
+## and https://github.com/search?q=topic%3Agithub-action+org%3Aplatformsh                                             ##
+##                                                                                                                    ##
+##                                       YOU CAN SAFELY DELETE THIS FILE                                              ##
+##                                                                                                                    ##
+########################################################################################################################
+name: Run Post PR Acceptance jobs
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  tb-sync:
+    uses: ./.github/workflows/tb-sync.yaml
+    secrets: inherit
+  last-updated:
+    if: ${{ always() }}
+    needs: [ tb-sync ]
+    uses: platformsh-templates/ghrw-templates/.github/workflows/last-updated.yaml@main
+    secrets: inherit
