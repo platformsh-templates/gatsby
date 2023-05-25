@@ -102,7 +102,7 @@ jobs:
           steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' &&
           (
             contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'packages.json')
+            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
           )
         shell: bash
         run: |
@@ -154,7 +154,7 @@ jobs:
               for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                 # @todo this is brittle, especially if we increase the number of files we dont want to commit
                 # is there a way to filter these two files out of the list?
-                if [[ "${file}" != "composer.json" ]] && [[ "${file}" != "packages.json" ]]; then
+                if [[ "${file}" != "composer.json" ]] && [[ "${file}" != "package.json" ]]; then
                   echo "Syncing $file"
                   cp ../$file templates/${{ env.TEMPLATENAME }}/files/$file
                   git add templates/${{ env.TEMPLATENAME }}/files/$file
@@ -231,7 +231,7 @@ jobs:
           steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' &&
           (
             contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'packages.json')
+            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
           )
         run: |
           NL=$'\n'
@@ -279,7 +279,7 @@ jobs:
           steps.create-issue.outputs.addlabel == 'yes' &&
           (
             contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'packages.json')
+            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
           )
         uses: platformsh/gha-add-label@main
         with:
