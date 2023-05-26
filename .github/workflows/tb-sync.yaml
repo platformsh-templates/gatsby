@@ -8,23 +8,20 @@ env:
   TBLOCALPATH: template-builder
 
 jobs:
-  sync-diffs-with-template-builder:
-    name: "Track psh configuration files"
+  # Performs checks to see if we need to perform a sync with template builder
+  do-sync:
+    name: Do we need to perform a sync
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'platformsh-templates' && github.event.commits[0].author.name != 'GitHub Action' }}
+    outputs:
+      proceed: ${{ steps.do-sync.outputs.proceed }}
+      changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
+      prNumber: ${{ steps.determine-if-pr-from-tb.outputs.prNumber }}
     steps:
-      - name: Set TemplateBuilder
-        shell: bash
-        run: |
-          echo "TEMPLATEBUILDER=${{ env.TBOWNER }}/${{ env.TBREPO }}" >> $GITHUB_ENV
-      - name: 'get repo'
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
-
       ####
       # @todo move the list of configuration files we want to track to an organizational variable?
       ####
+      # Did any of the files we need to keep in sync change?
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
@@ -37,25 +34,9 @@ jobs:
             composer.json
             package.json
 
-      - name: 'Set up Github token'
-        id: setup-gh-token
-        shell: bash
-        run: echo "GITHUB_TOKEN=${{ secrets.TEMPLATES_GITHUB_TOKEN }}" >> $GITHUB_ENV
-
-      - name: "Clone template-builder"
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
-          repository: ${{ env.TEMPLATEBUILDER }}
-          path: ${{ env.TBLOCALPATH }}
-
-      - name: 'set git config'
-        shell: bash
-        run: |
-          git config --global user.email "devrel@internal.platform.sh"
-          git config --global user.name "platformsh-devrel"
-
+      # We need to make sure the current push was from a pull request
       - name: Get Pull Request Number
+        if: steps.changed-files.outputs.all_changed_files != ''
         id: get-pr-number
         shell: bash
         run: |
@@ -69,10 +50,11 @@ jobs:
             continueJobs="no"
           fi
 
-          echo "CONTINUEJOBS=${continueJobs}" >> "$GITHUB_OUTPUT"
+          echo "CONTINUEJOBS=${continueJobs}" >> "$GITHUB_ENV"
 
+      # Now that we know the pull request number was the branch in the pull request named env.TBUPDATEBRANCH ?
       - name: Determine if push was from Template-Builder
-        if: steps.get-pr-number.outputs.CONTINUEJOBS == 'yes'
+        if: env.CONTINUEJOBS == 'yes' && steps.changed-files.outputs.all_changed_files != ''
         id: determine-if-pr-from-tb
         shell: bash
         run: |
@@ -84,12 +66,68 @@ jobs:
             continueJobs="yes"
           fi
 
-          echo "CONTINUEJOBS=${continueJobs}" >> "$GITHUB_OUTPUT"
+          echo "CONTINUEJOBS=${continueJobs}" >> "$GITHUB_ENV"
+          echo "prNumber=${{ env.PRNUMBER }} >> "$GITHUB_OUTPUT"
 
-      - name: Determine Template Name
+      # Report what we discovered
+      - name: Do Sync
+        id: do-sync
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          proceed=${{ env.CONTINUEJOBS }}
+          # if for some reason we didnt set proceed or we dont have any files, then dont have the 2nd job run
+          if [[ "${{ steps.changed-files.outputs.all_changed_files }}" == "" ]] || [[ -z "${proceed}" ]]; then
+            echo "::notice::No relevant files modified. All is well."
+            proceed="no"
+          fi
+          
+          echo "proceed=${proceed}" >> "$GITHUB_OUTPUT"
+
+  # Let's perform the sync, if applicable
+  sync-diffs-with-template-builder:
+    name: "Track psh configuration files"
+    needs: do-sync
+    runs-on: ubuntu-latest
+    # I don't think we'll need to retest the owner and last commit author since we depend on the do-sync job and it
+    # depends on these conditions. @todo possibly remove the extraneous conditions?
+    if: >- 
+      github.repository_owner == 'platformsh-templates' && 
+      github.event.commits[0].author.name != 'GitHub Action' &&
+      needs.do-sync.outputs.proceed == 'yes'
+    steps:
+      - name: 'Set TemplateBuilder <owner>/<name>'
+        shell: bash
+        run: |
+          echo "TEMPLATEBUILDER=${{ env.TBOWNER }}/${{ env.TBREPO }}" >> $GITHUB_ENV
+
+      - name: 'Set up Github token'
+        id: setup-gh-token
+        shell: bash
+        run: echo "GITHUB_TOKEN=${{ secrets.TEMPLATES_GITHUB_TOKEN }}" >> $GITHUB_ENV
+
+      - name: 'Clone template repo'
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
+
+      - name: "Clone template-builder"
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
+          repository: ${{ env.TEMPLATEBUILDER }}
+          path: ${{ env.TBLOCALPATH }}
+
+      - name: 'Get Pull Request Number'
+        id: get-pr-number
+        shell: bash
+        run: |
+          # grab the PRNumber we figured out in the do-sync job 
+          echo "PRNUMBER=${{ needs.do-sync.outputs.prNumber }}" >> $GITHUB_ENV
+
+      - name: 'Determine Template Name'
         id: determine-template-name
         shell: bash
-        if: steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes'
         run: |
           # Get current template name.
           arrIN=(${GITHUB_REPOSITORY//\// })
@@ -97,13 +135,10 @@ jobs:
           # we need this in a later step as well
           echo "TEMPLATENAME=${TEMPLATE}" >> $GITHUB_ENV
 
-      - name: Prep issue message
+      - name: 'Prep issue message'
         if: >-
-          steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' &&
-          (
-            contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
-          )
+            contains(needs.do-sync.outputs.changed-files, 'composer.json') ||
+            contains(needs.do-sync.outputs.changed-files, 'package.json')
         shell: bash
         run: |
           touch issue-message.txt
@@ -118,121 +153,112 @@ jobs:
       - name: "Sync updated psh configuration files"
         shell: bash
         id: build-tb-pr
-        if: steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes'
         run: |
-          if [ "${{ steps.changed-files.outputs.all_changed_files }}" == "" ];then
-              echo "::notice::No relevant files modified. All is well."
+          addLabel="no"
+          SYNC_BRANCH=sync-${{ env.TEMPLATENAME }}
+  
+          # Clone template-builder, and create a new branch that matches changes in template repo.
+          cd ${{ env.TBLOCALPATH }}
+          #let's make sure we have all the info from origin
+          git fetch origin
+          #now let's see if the branch we need already exists
+          remoteBranch=$(git ls-remote --heads origin "${SYNC_BRANCH}")
+          # if the remote branch already exists, then we need to check it out from origin. otherwise, create a new
+          # local branch that we'll push up later
+          # @todo is there a way to retrieve the remote name instead of assuming it is 'origin'?
+          #git checkout -b "${SYNC_BRANCH}""${remoteBranch:+ origin/${SYNC_BRANCH}}"
+          if [[ -z "${remoteBranch}" ]]; then
+            git checkout -b "${SYNC_BRANCH}"
           else
-              addLabel="no"
-              SYNC_BRANCH=sync-${{ env.TEMPLATENAME }}
-
-              # Clone template-builder, and create a new branch that matches changes in template repo.
-              cd ${{ env.TBLOCALPATH }}
-              #let's make sure we have all the info from origin
-              git fetch origin
-              #now let's see if the branch we need already exists
-              remoteBranch=$(git ls-remote --heads origin "${SYNC_BRANCH}")
-              # if the remote branch already exists, then we need to check it out from origin. otherwise, create a new
-              # local branch that we'll push up later
-              # @todo is there a way to retrieve the remote name instead of assuming it is 'origin'?
-              #git checkout -b "${SYNC_BRANCH}""${remoteBranch:+ origin/${SYNC_BRANCH}}"
-              if [[ -z "${remoteBranch}" ]]; then
-                git checkout -b "${SYNC_BRANCH}"
+            git checkout -b "${SYNC_BRANCH}" "origin/${SYNC_BRANCH}"
+          fi
+  
+          # go ahead and get the data on the files that were changed in the commit
+          prFileData=$(gh api "/repos/${GITHUB_REPOSITORY}/pulls/${{ env.PRNUMBER }}/files")
+          #pr url structure
+          prURLpattern="https://github.com/%s/pull/%s/files#diff-%s"
+          # Copy and stage the changed files
+          echo "Syncing revisions into template-builder"
+          NL=$'\n'
+          msg="Synching $GITHUB_REPOSITORY ($GITHUB_SHA).${NL}"
+  
+          for file in ${{ needs.do-sync.outputs.changed-files }}; do
+            # @todo this is brittle, especially if we increase the number of files we dont want to commit, or misspell one
+            # is there a way to filter these two files out of the list?
+            if [[ "${file}" != "composer.json" ]] && [[ "${file}" != "package.json" ]]; then
+              echo "Syncing $file"
+              cp ../$file templates/${{ env.TEMPLATENAME }}/files/$file
+              git add templates/${{ env.TEMPLATENAME }}/files/$file
+              msg="${msg} Updates templates/${{ env.TEMPLATENAME }}/files/${file}.${NL}"
+              echo "::notice::The configuration file ${file} has been changed and will be added to a PR for Template Builder."
+            else
+              # let's go ahead and build up our issue message
+              echo "::notice::Saving an issue message for ${file}"
+              {
+                echo "The package management file ${file} was changed. The following is the patch:";
+                echo "\`\`\`";
+                echo "$(jq --arg filename "${file}" -r '.[] | select(.filename==$filename) | .patch' <<< ${prFileData})";
+                echo "\`\`\`";
+                echo "";
+                echo "Link to the diff above: ";
+                fileDiffVal=$(echo -n "${file}" | shasum -a 256 | cut -d ' ' -f1);
+                echo $(printf "${prURLpattern}" "${GITHUB_REPOSITORY}" "${{ env.PRNUMBER }}" "${fileDiffVal}");
+                echo "";
+                echo "";
+                } >> ../issue-message.txt
+            fi
+          done
+  
+          # do we have anything to actually commit?
+          if [[ $(git diff --name-only --cached) ]]; then
+            # Commit and push to template-builder.
+            echo "Commit and push"
+            # git add .
+            git commit -m "${msg}"
+            git status
+            git push origin ${SYNC_BRANCH}
+  
+            prTitle="Sync: matching ${GITHUB_REPOSITORY}"
+            prBody="Syncing updates for template ${{ env.TEMPLATEBUILDER }} made in the latest [pull request](https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA})."
+  
+            # do we already have an open PR for this branch?
+            # gh pr list -H sync-wordpress-composer --json number | jq -r '.[] | .number'
+            tbPRData=$(gh pr list -H "${SYNC_BRANCH}" --json number,url -R ${{ env.TEMPLATEBUILDER }})
+  
+            if [[ "${tbPRData}" == "[]" ]]; then
+              # Create the corresponding PR.
+              prURL=$(gh pr create --head ${SYNC_BRANCH} --title "${prTitle}" --body "${prBody}")
+  
+              if [ -z "${prURL}" ]; then
+                echo "::warning::Creating a PR in template builder for the latest changes failed."
+                echo "::debug::Command issued was:"
+                prCommand="pr create --head \"${SYNC_BRANCH}\" --title \"${prTitle}\" --body \"${prBody}\""
+                echo "::debug::${prCommand}"
               else
-                git checkout -b "${SYNC_BRANCH}" "origin/${SYNC_BRANCH}"
+                echo "::notice::Created a PR in template builder with the latest changes: ${prURL}"
+                addLabel="yes"
+                echo "identifier=${prURL}" >> $GITHUB_OUTPUT
               fi
-
-              # go ahead and get the data on the files that were changed in the commit
-              prFileData=$(gh api "/repos/${GITHUB_REPOSITORY}/pulls/${{ env.PRNUMBER }}/files")
-              #pr url structure
-              prURLpattern="https://github.com/%s/pull/%s/files#diff-%s"
-              # Copy and stage the changed files
-              echo "Syncing revisions into template-builder"
-              NL=$'\n'
-              msg="Synching $GITHUB_REPOSITORY ($GITHUB_SHA).${NL}"
-
-              for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                # @todo this is brittle, especially if we increase the number of files we dont want to commit
-                # is there a way to filter these two files out of the list?
-                if [[ "${file}" != "composer.json" ]] && [[ "${file}" != "package.json" ]]; then
-                  echo "Syncing $file"
-                  cp ../$file templates/${{ env.TEMPLATENAME }}/files/$file
-                  git add templates/${{ env.TEMPLATENAME }}/files/$file
-                  msg="${msg} Updates templates/${{ env.TEMPLATENAME }}/files/${file}.${NL}"
-                  echo "::notice::The configuration file ${file} has been changed and will be added to a PR for Template Builder."
-                else
-                  # let's go ahead and build up our issue message
-                  echo "::notice::Saving an issue message for ${file}"
-                  {
-                    echo "The package management file ${file} was changed. The following is the patch:";
-                    echo "\`\`\`";
-                    echo "$(jq --arg filename "${file}" -r '.[] | select(.filename==$filename) | .patch' <<< ${prFileData})";
-                    echo "\`\`\`";
-                    echo "";
-                    echo "Link to the diff above: ";
-                    fileDiffVal=$(echo -n "${file}" | shasum -a 256 | cut -d ' ' -f1);
-                    echo $(printf "${prURLpattern}" "${GITHUB_REPOSITORY}" "${{ env.PRNUMBER }}" "${fileDiffVal}");
-                    echo "";
-                    echo "";
-                    } >> ../issue-message.txt
-                fi
-              done
-
-              # do we have anything to actually commit?
-              if [[ $(git diff --name-only --cached) ]]; then
-                # Commit and push to template-builder.
-                echo "Commit and push"
-                # git add .
-                git commit -m "${msg}"
-                git status
-                git push origin ${SYNC_BRANCH}
-
-                prTitle="Sync: matching ${GITHUB_REPOSITORY}"
-                prBody="Syncing updates for template ${{ env.TEMPLATEBUILDER }} made in the latest [pull request](https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA})."
-
-                # do we already have an open PR for this branch?
-                # gh pr list -H sync-wordpress-composer --json number | jq -r '.[] | .number'
-                tbPRData=$(gh pr list -H "${SYNC_BRANCH}" --json number,url -R ${{ env.TEMPLATEBUILDER }})
-
-                if [[ "${tbPRData}" == "[]" ]]; then
-                  # Create the corresponding PR.
-                  prURL=$(gh pr create --head ${SYNC_BRANCH} --title "${prTitle}" --body "${prBody}")
-
-                  if [ -z "${prURL}" ]; then
-                    echo "::warning::Creating a PR in template builder for the latest changes failed."
-                    echo "::debug::Command issued was:"
-                    prCommand="pr create --head \"${SYNC_BRANCH}\" --title \"${prTitle}\" --body \"${prBody}\""
-                    echo "::debug::${prCommand}"
-                  else
-                    echo "::notice::Created a PR in template builder with the latest changes: ${prURL}"
-                    addLabel="yes"
-                    echo "identifier=${prURL}" >> $GITHUB_OUTPUT
-                  fi
-                else
-                  #this means we already have an open PR
-                  echo "::notice::There is already an open pull request for ${SYNC_BRANCH} on ${{ env.TEMPLATEBUILDER }}."
-                  tbPR=$(jq -r '.[] | .number' <<< $tbPRData)
-                  tbPRUrl=$(jq -r '.[] | .url' <<< $tbPRData)
-                  echo "::notice::Please see pull request #${tbPR}: ${tbPRUrl}"
-                  # now let's add a comment
-                  gh pr comment "${tbPR}" -b "${prBody}" -R ${{ env.TEMPLATEBUILDER }}
-                fi
-              fi
+            else
+              #this means we already have an open PR
+              echo "::notice::There is already an open pull request for ${SYNC_BRANCH} on ${{ env.TEMPLATEBUILDER }}."
+              tbPR=$(jq -r '.[] | .number' <<< $tbPRData)
+              tbPRUrl=$(jq -r '.[] | .url' <<< $tbPRData)
+              echo "::notice::Please see pull request #${tbPR}: ${tbPRUrl}"
+              # now let's add a comment
+              gh pr comment "${tbPR}" -b "${prBody}" -R ${{ env.TEMPLATEBUILDER }}
+            fi
+          fi
 
           echo "addlabel=${addLabel}" >> $GITHUB_OUTPUT
-
-          fi
 
 
       - name: Create issue if package management files were changed
         shell: bash
         id: create-issue
         if: >-
-          steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' &&
-          (
-            contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
-          )
+          contains(needs.do-sync.outputs.changed-files, 'composer.json') ||
+          contains(needs.do-sync.outputs.changed-files, 'package.json')
         run: |
           NL=$'\n'
           addLabel="no"
@@ -261,8 +287,7 @@ jobs:
 
       - name: Add Label to PR
         # We also need the pull request number...
-        if: >-
-          steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' && steps.build-tb-pr.outputs.addlabel == 'yes'
+        if: steps.build-tb-pr.outputs.addlabel == 'yes'
         uses: platformsh/gha-add-label@main
         with:
           issue-type: 'pull request'
@@ -275,11 +300,10 @@ jobs:
       - name: Add Label to Issue
         # We also need the issue number...
         if: >-
-          steps.determine-if-pr-from-tb.outputs.CONTINUEJOBS == 'yes' &&
           steps.create-issue.outputs.addlabel == 'yes' &&
           (
-            contains(steps.changed-files.outputs.all_changed_files, 'composer.json') ||
-            contains(steps.changed-files.outputs.all_changed_files, 'package.json')
+            contains(needs.do-sync.outputs.changed-files, 'composer.json') ||
+            contains(needs.do-sync.outputs.changed-files, 'package.json')
           )
         uses: platformsh/gha-add-label@main
         with:
