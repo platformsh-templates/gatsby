@@ -10,8 +10,11 @@ type: 'nodejs:16'
 # Use Yarn instead of npm.
 build:
     flavor: none
-
-# Build dependencies. 
+    
+# Installs global dependencies as part of the build process. They’re independent of your app’s dependencies and
+# are available in the PATH during the build process and in the runtime environment. They’re installed before
+# the build hook runs using a package manager for the language.
+# More information: https://docs.platform.sh/create-apps/app-reference.html#dependencies
 dependencies:
     nodejs:
         yarn: "1.22.5"
