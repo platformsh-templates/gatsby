@@ -16,7 +16,8 @@ dependencies:
     nodejs:
         yarn: "1.22.5"
 
-# The hooks that will be triggered when the package is deployed.
+# Hooks allow you to customize your code/environment as the project moves through the build and deploy stages
+# More info: https://docs.platform.sh/create-apps/app-reference.html#hooks
 hooks:
     # Build hooks can modify the application files on disk but not access any services like databases.
     build: |
