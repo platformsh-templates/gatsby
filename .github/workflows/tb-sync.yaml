@@ -45,6 +45,8 @@ jobs:
         id: get-pr-number
         shell: bash
         run: |
+          # we can't use the gh cli without first setting an environmental variable...
+          export GITHUB_TOKEN="${{ secrets.TEMPLATES_GITHUB_TOKEN }}"
           # we need the pull request number that created the push that triggered this event.
           prNumber=$(gh api "/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" | jq -r '.[] | .number')
 
