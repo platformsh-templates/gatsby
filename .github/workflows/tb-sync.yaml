@@ -13,6 +13,8 @@ jobs:
     name: Do we need to perform a sync
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'platformsh-templates' && github.event.commits[0].author.name != 'GitHub Action' }}
+    env:
+      GH_TOKEN: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
     outputs:
       proceed: ${{ steps.do-sync.outputs.proceed }}
       changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
@@ -44,8 +46,6 @@ jobs:
         if: steps.changed-files.outputs.all_changed_files != ''
         id: get-pr-number
         shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
         run: |
           # we need the pull request number that created the push that triggered this event.
           prNumber=$(gh api "/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" | jq -r '.[] | .number')
@@ -96,6 +96,8 @@ jobs:
     name: "Track psh configuration files"
     needs: do-sync
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
     # I don't think we'll need to retest the owner and last commit author since we depend on the do-sync job and it
     # depends on these conditions. @todo possibly remove the extraneous conditions?
     if: >- 
@@ -107,11 +109,6 @@ jobs:
         shell: bash
         run: |
           echo "TEMPLATEBUILDER=${{ env.TBOWNER }}/${{ env.TBREPO }}" >> $GITHUB_ENV
-
-      - name: 'Set up Github token'
-        id: setup-gh-token
-        shell: bash
-        run: echo "GITHUB_TOKEN=${{ secrets.TEMPLATES_GITHUB_TOKEN }}" >> $GITHUB_ENV
 
       - name: 'Clone template repo'
         uses: actions/checkout@v3
