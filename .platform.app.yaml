@@ -31,6 +31,8 @@ disk: 5120
 # The web key configures the web server running in front of your app.
 # More information: https://docs.platform.sh/create-apps/app-reference.html#web
 web:
+    # Each key in locations is a path on your site with a leading /.
+    # More information: https://docs.platform.sh/create-apps/app-reference.html#locations
     locations:
         '/':
             # The public directory of the application relative to its root.
