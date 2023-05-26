@@ -18,6 +18,11 @@ jobs:
       changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
       prNumber: ${{ steps.determine-if-pr-from-tb.outputs.prNumber }}
     steps:
+      # changed-files action needs us to checkout the repo before it can evaluate it for changes
+      - name: 'Clone template repo'
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TEMPLATES_GITHUB_TOKEN }}
       ####
       # @todo move the list of configuration files we want to track to an organizational variable?
       ####
