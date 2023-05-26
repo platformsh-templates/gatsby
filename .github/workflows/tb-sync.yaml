@@ -111,6 +111,13 @@ jobs:
         run: |
           echo "TEMPLATEBUILDER=${{ env.TBOWNER }}/${{ env.TBREPO }}" >> $GITHUB_ENV
 
+      - name: 'set git config'
+        shell: bash
+        run: |
+          # @todo set these as repository variables
+          git config --global user.email "devrel@internal.platform.sh"
+          git config --global user.name "platformsh-devrel"
+
       - name: 'Clone template repo'
         uses: actions/checkout@v3
         with:
