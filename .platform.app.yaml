@@ -26,7 +26,8 @@ hooks:
 # The size of the persistent disk of the application (in MB).
 disk: 5120
 
-# The configuration of the application when it is exposed to the web.
+# The web key configures the web server running in front of your app.
+# More information: https://docs.platform.sh/create-apps/app-reference.html#web
 web:
     locations:
         '/':
