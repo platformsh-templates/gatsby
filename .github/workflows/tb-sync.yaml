@@ -74,7 +74,8 @@ jobs:
           fi
 
           echo "CONTINUEJOBS=${continueJobs}" >> "$GITHUB_ENV"
-          echo "prNumber=${{ env.PRNUMBER }} >> "$GITHUB_OUTPUT"
+          # we need to take the PR from env and now save it as an output so later jobs can retrieve it
+          echo "prNumber=${{ env.PRNUMBER }}" >> "$GITHUB_OUTPUT"
 
       # Report what we discovered
       - name: Do Sync
