@@ -2063,9 +2063,9 @@
     "@types/estree" "*"
 
 "@types/eslint@*":
-  version "8.40.1"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.40.1.tgz#92edc592c3575b52a8e790cd5ec04efe28f3d24c"
-  integrity sha512-vRb792M4mF1FBT+eoLecmkpLXwxsBHvWWRGJjzbYANBM6DtiJc6yETyv4rqDA6QNjF1pkj1U7LMA6dGb3VYlHw==
+  version "8.40.2"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.40.2.tgz#2833bc112d809677864a4b0e7d1de4f04d7dac2d"
+  integrity sha512-PRVjQ4Eh9z9pmmtaq8nTjZjQwKFk7YIHIud3lRoKRBgUQjgjRmoGxxGEPXQkF+lH7QkHJRNr5F4aBgYCW0lqpQ==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -2173,9 +2173,9 @@
     form-data "^3.0.0"
 
 "@types/node@*", "@types/node@>=10.0.0":
-  version "20.3.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.3.0.tgz#719498898d5defab83c3560f45d8498f58d11938"
-  integrity sha512-cumHmIAf6On83X7yP+LrsEyUOf/YlociZelmpRYaGFydoaPdxdt80MAbu6vWerQT2COCp2nPvHdsbD7tHn/YlQ==
+  version "20.3.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.3.1.tgz#e8a83f1aa8b649377bb1fb5d7bac5cb90e784dfe"
+  integrity sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==
 
 "@types/node@^8.5.7":
   version "8.10.66"
@@ -4228,9 +4228,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.428:
-  version "1.4.428"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.428.tgz#c31fc88e854f49d8305cdabf6ec934ff1588a902"
-  integrity sha512-L7uUknyY286of0AYC8CKfgWstD0Smk2DvHDi9F0GWQhSH90Bzi7iDrmCbZKz75tYJxeGSAc7TYeKpmbjMDoh1w==
+  version "1.4.429"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.429.tgz#055a2543ba8b1a847bebf521791715ec30f8d97b"
+  integrity sha512-COua8RvN548KwPFzKMrTjFbmDsQRgdi0zSAhmo70TwC1tfLOSqq8p09n+GkdF5buvzE/NEYn1dP3itbfhun9gg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4292,9 +4292,9 @@ engine.io@~6.2.1:
     ws "~8.2.3"
 
 enhanced-resolve@^5.14.1, enhanced-resolve@^5.8.3:
-  version "5.14.1"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.14.1.tgz#de684b6803724477a4af5d74ccae5de52c25f6b3"
-  integrity sha512-Vklwq2vDKtl0y/vtwjSesgJ5MYS7Etuk5txS8VdKL4AOS1aUlD96zqIfsOSLQsdv3xgMRbtkWM8eG9XDfKUPow==
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.15.0.tgz#1af946c7d93603eb88e9896cee4904dc012e9c35"
+  integrity sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==
   dependencies:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
@@ -6217,9 +6217,9 @@ hosted-git-info@^3.0.8:
     lru-cache "^6.0.0"
 
 html-entities@^2.1.0, html-entities@^2.3.3:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.5.tgz#9f117bf6a5962efc31e094f6c6dad3cf3b95e33e"
-  integrity sha512-72TJlcMkYsEJASa/3HnX7VT59htM7iSHbH59NSZbtc+22Ap0Txnlx91sfeB+/A7wNZg7UxtZdhAW4y+/jimrdg==
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.6.tgz#966391d58e5737c77bca4025e31721b496ab7454"
+  integrity sha512-9o0+dcpIw2/HxkNuYKxSJUF/MMRZQECK4GnF+oQOmJ83yCVHTWgCH5aOXxK5bozNRmM8wtgryjHD3uloPBDEGw==
 
 html-void-elements@^1.0.0:
   version "1.0.5"
