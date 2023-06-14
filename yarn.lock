@@ -3231,9 +3231,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001464, caniuse-lite@^1.0.30001502:
-  version "1.0.30001502"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001502.tgz#f7e4a76eb1d2d585340f773767be1fefc118dca8"
-  integrity sha512-AZ+9tFXw1sS0o0jcpJQIXvFTOB/xGiQ4OQ2t98QX3NDn2EZTSRBC801gxrsGgViuq2ak/NLkNgSNEPtCr5lfKg==
+  version "1.0.30001503"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001503.tgz#88b6ff1b2cf735f1f3361dc1a15b59f0561aa398"
+  integrity sha512-Sf9NiF+wZxPfzv8Z3iS0rXM1Do+iOy2Lxvib38glFX+08TCYYYGR5fRJXk4d77C4AYwhUjgYgMsMudbh2TqCKw==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -4291,7 +4291,7 @@ engine.io@~6.2.1:
     engine.io-parser "~5.0.3"
     ws "~8.2.3"
 
-enhanced-resolve@^5.14.1, enhanced-resolve@^5.8.3:
+enhanced-resolve@^5.15.0, enhanced-resolve@^5.8.3:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.15.0.tgz#1af946c7d93603eb88e9896cee4904dc012e9c35"
   integrity sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==
@@ -9408,10 +9408,10 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-schema-utils@^3.0, schema-utils@^3.0.0, schema-utils@^3.1.1, schema-utils@^3.1.2:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.2.0.tgz#7dff4881064a4f22c09f0c6a1457feb820fd0636"
-  integrity sha512-0zTyLGyDJYd/MBxG1AhJkKa6fpEBds4OQO2ut0w7OYG+ZGhGea09lijvzsqegYSik88zc7cUtIlnnO+/BvD6gQ==
+schema-utils@^3.0, schema-utils@^3.0.0, schema-utils@^3.1.1, schema-utils@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.3.0.tgz#f50a88877c3c01652a15b622ae9e9795df7a60fe"
+  integrity sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==
   dependencies:
     "@types/json-schema" "^7.0.8"
     ajv "^6.12.5"
@@ -10723,9 +10723,9 @@ webpack-virtual-modules@^0.3.2:
     debug "^3.0.0"
 
 webpack@^5.61.0:
-  version "5.86.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.86.0.tgz#b0eb81794b62aee0b7e7eb8c5073495217d9fc6d"
-  integrity sha512-3BOvworZ8SO/D4GVP+GoRC3fVeg5MO4vzmq8TJJEkdmopxyazGDxN8ClqN12uzrZW9Tv8EED8v5VSb6Sqyi0pg==
+  version "5.87.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.87.0.tgz#df8a9c094c6037f45e0d77598f9e59d33ca3a98c"
+  integrity sha512-GOu1tNbQ7p1bDEoFRs2YPcfyGs8xq52yyPBZ3m2VGnXGtV9MxjrkABHm4V9Ia280OefsSLzvbVoXcfLxjKY/Iw==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^1.0.0"
@@ -10736,7 +10736,7 @@ webpack@^5.61.0:
     acorn-import-assertions "^1.9.0"
     browserslist "^4.14.5"
     chrome-trace-event "^1.0.2"
-    enhanced-resolve "^5.14.1"
+    enhanced-resolve "^5.15.0"
     es-module-lexer "^1.2.1"
     eslint-scope "5.1.1"
     events "^3.2.0"
@@ -10746,7 +10746,7 @@ webpack@^5.61.0:
     loader-runner "^4.2.0"
     mime-types "^2.1.27"
     neo-async "^2.6.2"
-    schema-utils "^3.1.2"
+    schema-utils "^3.2.0"
     tapable "^2.1.1"
     terser-webpack-plugin "^5.3.7"
     watchpack "^2.4.0"
