@@ -1171,14 +1171,14 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource-variable/montserrat@^5.0.4":
-  version "5.0.7"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.7.tgz#0d42fdb33e9178db80152eabeeed3bfcf93d0180"
-  integrity sha512-DejdJHVW1l918+07Sk35tPGWWSsboIGPb/lX1MHMa19Ja1Q3IyOJx8i2//xol6iTsQPwyQgrfcqrhqEs2EY67w==
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.8.tgz#b68398aadebd068db952c3d1434eceef47e34e18"
+  integrity sha512-PFTXH8K+kyCUiCkj7C3gpDe3gFKpf+5xOIpScd+7AsYimJ6j36TagzkRWH5njVK60aeT8fSZ0fLlhWsYEIxZdQ==
 
 "@fontsource/merriweather@^5.0.3":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.6.tgz#bdcc31b408e5c414a93f3a09b53b78bb58eab801"
-  integrity sha512-rDDlpaftrjm8fJtt0t3ApO4Sgii164J6jGu3R1k7KI8iKsxGSTenC3Orwd2fA0F2FwFUdJkLT8L7QS7AdDcJoA==
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.7.tgz#c86319fc36566e5050f17192bef4392d956f25fd"
+  integrity sha512-DtdqgsoN99fbxjvOXRdJ8XsyuANNP6bIH+jQjhCCr3GOvN4yWt7BKDFocvkl7itQlNK8bJFIPtgUL5g94hyytw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.11.0":
   version "2.11.0"
@@ -3279,9 +3279,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001464, caniuse-lite@^1.0.30001517:
-  version "1.0.30001518"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001518.tgz#b3ca93904cb4699c01218246c4d77a71dbe97150"
-  integrity sha512-rup09/e3I0BKjncL+FesTayKtPrdwKhUufQFd3riFw1hHg8JmIFoInYfB102cFcY/pPgGmdyl/iy+jgiDi2vdA==
+  version "1.0.30001519"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001519.tgz#3e7b8b8a7077e78b0eb054d69e6edf5c7df35601"
+  integrity sha512-0QHgqR+Jv4bxHMp8kZ1Kn8CH55OikjKJ6JmKkZYP1F3D7w+lnFXF70nG5eNfsZS89jadi5Ywy5UCSKLAglIRkg==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -4236,9 +4236,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.477:
-  version "1.4.482"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.482.tgz#77c5ed37b93d4dda860e27538e0e2a01d6a19e02"
-  integrity sha512-h+UqpfmEr1Qkk0zp7ej/jid7CXoq4m4QzW6wNTb0ELJ/BZCpA4wgUylBIMGCe621tnr4l5VmoHjdoSx2lbnNJA==
+  version "1.4.483"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.483.tgz#34d567e907de9699315a247824495917a83064b0"
+  integrity sha512-YLwU0iF//9R3cCEfq0wgL+pf9vglE4kwAg4S5tkVVZljUDKv7Wcz67mTY4OOj+T7YUbTGuqlbqgdl/s+7Q8KTw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
