@@ -1171,9 +1171,9 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource-variable/montserrat@^5.0.4":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.6.tgz#ef59a8a1b271e5a4e5fded2959fc267658f3fcbd"
-  integrity sha512-knjhYCaoKAqNce5LPezPY9j4Qbwa6mRwXvyS/Z3/yq2XoibX4V1E/39V6OnAonxUKwyCiu/D+QZfzlJp4Zu7CA==
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.7.tgz#0d42fdb33e9178db80152eabeeed3bfcf93d0180"
+  integrity sha512-DejdJHVW1l918+07Sk35tPGWWSsboIGPb/lX1MHMa19Ja1Q3IyOJx8i2//xol6iTsQPwyQgrfcqrhqEs2EY67w==
 
 "@fontsource/merriweather@^5.0.3":
   version "5.0.6"
@@ -4236,9 +4236,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.477:
-  version "1.4.481"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.481.tgz#0a6558c4acc171f7ab8a7e1a1c4cd2c6aa14523c"
-  integrity sha512-25DitMKGaWUPjv3kCt2H3UqgMhmdN+ufG+PoSjnQtheR64Dvo75RbojLPzUmnwrEuLEzR5YrbTzOUq9DtnTUUw==
+  version "1.4.482"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.482.tgz#77c5ed37b93d4dda860e27538e0e2a01d6a19e02"
+  integrity sha512-h+UqpfmEr1Qkk0zp7ej/jid7CXoq4m4QzW6wNTb0ELJ/BZCpA4wgUylBIMGCe621tnr4l5VmoHjdoSx2lbnNJA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -7480,9 +7480,9 @@ msgpackr-extract@^3.0.2:
     "@msgpackr-extract/msgpackr-extract-win32-x64" "3.0.2"
 
 msgpackr@^1.5.4:
-  version "1.9.5"
-  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.9.5.tgz#ac548c5f4546db895e84e46d39d813be961dc527"
-  integrity sha512-/IJ3cFSN6Ci3eG2wLhbFEL6GT63yEaoN/R5My2QkV6zro+OJaVRLPlwvxY7EtHYSmDlQpk8stvOQTL2qJFkDRg==
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.9.6.tgz#0b2bd37fba705756df795fdfe06a55f447c7bc47"
+  integrity sha512-50rmb6+ZWvEm0vJn8R8CwI1Eavss3h5rgtKrcdUal3EkZcpqw82+xsmc7RoHb8fYB5V4EOU2NDaOitDAdO0t+w==
   optionalDependencies:
     msgpackr-extract "^3.0.2"
 
