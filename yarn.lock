@@ -9793,9 +9793,9 @@ style-to-object@^0.3.0:
     inline-style-parser "0.1.1"
 
 style-to-object@^0.4.1:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-0.4.2.tgz#a8247057111dea8bd3b8a1a66d2d0c9cf9218a54"
-  integrity sha512-1JGpfPB3lo42ZX8cuPrheZbfQ6kqPPnPHlKMyeRYtfKD+0jG+QsXgXN57O/dvJlzlB2elI6dGmrPnl5VPQFPaA==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-0.4.3.tgz#2c7386e0eac8c3a145be06c572b7c5422c2eaf04"
+  integrity sha512-RP9icVx0g3Pt0CyNiC2qvBkqMTHD5uBVC2XYcSr/ag8QWKApx/oXEh2ehMGSyzkjK0+ySkukMuO+mz+DNQq57Q==
   dependencies:
     inline-style-parser "0.1.1"
 
