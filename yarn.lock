@@ -1162,9 +1162,9 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource-variable/montserrat@^5.0.4":
-  version "5.0.15"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.15.tgz#1afd0b42de2d701b483813d1eebce7d09d2111a4"
-  integrity sha512-F/+Au4k4Aq/+6R22XAEGJjbULimgPAZRn9TWepyYCDIFc7BW6SaTj3HtbfaGHF+A6O4+vjZI778fkbJ1I2DzGg==
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.16.tgz#bb1138c8fee894c6b02795e03bb84ed8ac9a20a1"
+  integrity sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==
 
 "@fontsource/merriweather@^5.0.3":
   version "5.0.8"
