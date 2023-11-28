@@ -4264,9 +4264,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.535:
-  version "1.4.595"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.595.tgz#fa33309eb9aabb7426915f8e166ec60f664e9ad4"
-  integrity sha512-+ozvXuamBhDOKvMNUQvecxfbyICmIAwS4GpLmR0bsiSBlGnLaOcs2Cj7J8XSbW+YEaN3Xl3ffgpm+srTUWFwFQ==
+  version "1.4.596"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.596.tgz#6752d1aa795d942d49dfc5d3764d6ea283fab1d7"
+  integrity sha512-zW3zbZ40Icb2BCWjm47nxwcFGYlIgdXkAx85XDO7cyky9J4QQfq8t0W19/TLZqq3JPQXtlv8BPIGmfa9Jb4scg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -7953,9 +7953,9 @@ optionator@^0.9.1:
     type-check "^0.4.0"
 
 ordered-binary@^1.2.4:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.5.0.tgz#11870c7b20115b216063ee3bf46ec4df1f1111a3"
-  integrity sha512-++aU7c311tYsAmveDwjhZDT5G8DyS4skHCUtJieEU3aYwiKaPqnn+QQaLXZyXfQqK0JaLh4Q1Jr0Dx/BpxjEKg==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.5.1.tgz#94ccbf14181711081ee23931db0dc3f58aaa0df6"
+  integrity sha512-5VyHfHY3cd0iza71JepYG50My+YUbrFtGoUz2ooEydPyPM7Aai/JW098juLr+RG6+rDJuzNNTsEQu2DZa1A41A==
 
 os-tmpdir@~1.0.2:
   version "1.0.2"
