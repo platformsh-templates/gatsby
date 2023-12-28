@@ -1441,7 +1441,7 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
-"@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.18", "@jridgewell/trace-mapping@^0.3.9":
+"@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.18", "@jridgewell/trace-mapping@^0.3.20", "@jridgewell/trace-mapping@^0.3.9":
   version "0.3.20"
   resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.20.tgz#72e45707cf240fa6b081d0366f8265b0cd10197f"
   integrity sha512-R8LcPeWZol2zR8mmH3JeKQ6QRCFb7XgUhV9ZlGhHLGyg4wpPiPZNQOOWhFZhxKw8u//yTbNGI42Bx/3paXEQ+Q==
@@ -1450,9 +1450,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
 "@lezer/common@^1.0.0":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@lezer/common/-/common-1.1.2.tgz#2fc5cd6788094ffc816b539ab2bc55bafacd2abc"
-  integrity sha512-V+GqBsga5+cQJMfM0GdnHmg4DgWvLzgMWjbldBg0+jC3k9Gu6nJNZDLJxXEBT1Xj8KhRN4jmbC5CY7SIL++sVw==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@lezer/common/-/common-1.2.0.tgz#f10493d12c4a196a02ff5fcf5695a516a4039aae"
+  integrity sha512-Wmvlm4q6tRpwiy20TnB3yyLTZim38Tkc50dPY8biQRwqE+ati/wD84rm3N15hikvdT4uSg9phs9ubjvcLmkpKg==
 
 "@lezer/lr@^1.0.0":
   version "1.3.14"
@@ -2282,9 +2282,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "18.2.45"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.45.tgz#253f4fac288e7e751ab3dc542000fb687422c15c"
-  integrity sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==
+  version "18.2.46"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.46.tgz#f04d6c528f8f136ea66333bc66abcae46e2680df"
+  integrity sha512-nNCvVBcZlvX4NU1nRRNV/mFl1nNRuTuslAJglQsq+8ldXe5Xv0Wd2f7WTE3jOxhLH2BFfiZGC6GCp+kHQbgG+w==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -7625,9 +7625,9 @@ msgpackr-extract@^3.0.2:
     "@msgpackr-extract/msgpackr-extract-win32-x64" "3.0.2"
 
 msgpackr@^1.5.4:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.10.0.tgz#adbca9c951f06647a808f76bc00a519cf6f7fbe4"
-  integrity sha512-rVQ5YAQDoZKZLX+h8tNq7FiHrPJoeGHViz3U4wIcykhAEpwF/nH2Vbk8dQxmpX5JavkI8C7pt4bnkJ02ZmRoUw==
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.10.1.tgz#51953bb4ce4f3494f0c4af3f484f01cfbb306555"
+  integrity sha512-r5VRLv9qouXuLiIBrLpl2d5ZvPt8svdQTl5/vMvE4nzDMyEX4sgW5yWhuBBj5UmgwOTWj8CIdSXn5sAfsHAWIQ==
   optionalDependencies:
     msgpackr-extract "^3.0.2"
 
@@ -9962,17 +9962,17 @@ tar-stream@^3.1.5:
     streamx "^2.15.0"
 
 terser-webpack-plugin@^5.3.7, terser-webpack-plugin@^5.3.9:
-  version "5.3.9"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.3.9.tgz#832536999c51b46d468067f9e37662a3b96adfe1"
-  integrity sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==
+  version "5.3.10"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.3.10.tgz#904f4c9193c6fd2a03f693a2150c62a92f40d199"
+  integrity sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==
   dependencies:
-    "@jridgewell/trace-mapping" "^0.3.17"
+    "@jridgewell/trace-mapping" "^0.3.20"
     jest-worker "^27.4.5"
     schema-utils "^3.1.1"
     serialize-javascript "^6.0.1"
-    terser "^5.16.8"
+    terser "^5.26.0"
 
-terser@^5.16.8, terser@^5.2.0:
+terser@^5.2.0, terser@^5.26.0:
   version "5.26.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.26.0.tgz#ee9f05d929f4189a9c28a0feb889d96d50126fe1"
   integrity sha512-dytTGoE2oHgbNV9nTzgBEPaqAWvcJNl66VZ0BkJqlvp71IjO8CxdBx/ykCNb47cLnCmCvRZ6ZR0tLkqvZCdVBQ==
