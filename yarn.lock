@@ -1163,14 +1163,14 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource-variable/montserrat@^5.0.4":
-  version "5.0.20"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.20.tgz#8bb5ad9a46d10dda444483b8c391cf3ea3393772"
-  integrity sha512-/D+j5M68+GnSbi1A0K+0qnVpnu8O2rd5zsmE7COgD7EK/G9tNEE8emcg7+HkKsyViMmYuQ+t4o0FmB6pU/aBRQ==
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.21.tgz#cb458022bff50fd5e01766bc065f7043154bad59"
+  integrity sha512-MY0mZf5J3X8/Z9jw2nRMcD7peDg5MInz1BvKceiDPiw6IKPJu/lvCD4KhUIvhYzpUP7sPRDm/fg3ojonHLs81g==
 
 "@fontsource/merriweather@^5.0.3":
-  version "5.0.14"
-  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.14.tgz#e762226098ad42d1be5ebe4da080609e3c4d2c16"
-  integrity sha512-fdlH6iHzbrxdS/e2GbDHNtBSH7HXn2fz5f4uyCZjC4tPmMMTV9xM3RMplrRUegWQ7OD0XDuhXhnO5lSZo+9h+A==
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-5.0.15.tgz#8cd75d608e843ea41eea17c5b42868edbdc714f0"
+  integrity sha512-OLgiY1/aPN6Gd6KIc7aKPn2nQfQEA7NC9h5Ah1GXI/wLX0eAvl3RrNJgxQfTOa9XA3eRVJefAA9V9RJ9ccgn/w==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.13.1":
   version "2.13.1"
