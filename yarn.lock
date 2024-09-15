@@ -1143,9 +1143,9 @@
     eslint-visitor-keys "^3.3.0"
 
 "@eslint-community/regexpp@^4.4.0":
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.11.0.tgz#b0ffd0312b4a3fd2d6f77237e7248a5ad3a680ae"
-  integrity sha512-G/M/tIiMrTAxEWRfLfQJMmGNX28IxBg4PBz8XqQhqUHLFI6TL2htpIB1iQCj144V5ee/JaKyT9/WZ0MGZWfA7A==
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.11.1.tgz#a547badfc719eb3e5f4b556325e542fbe9d7a18f"
+  integrity sha512-m4DVN9ZqskZoLU5GlWZadwDnYo3vAEydiUayB9widCl9ffWx2IvPnp6n3on5rJmziJSw9Bv+Z3ChDVdMwXCY8Q==
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
@@ -4351,9 +4351,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.4:
-  version "1.5.22"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.22.tgz#5ae58990a35391bad7605742e52855a0f281ef82"
-  integrity sha512-tKYm5YHPU1djz0O+CGJ+oJIvimtsCcwR2Z9w7Skh08lUdyzXY5djods3q+z2JkWdb7tCcmM//eVavSRAiaPRNg==
+  version "1.5.23"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.23.tgz#6dabd8f7fec5cbf618b732ff4c42950dcc7a3be5"
+  integrity sha512-mBhODedOXg4v5QWwl21DjM5amzjmI1zw9EPrPK/5Wx7C8jt33bpZNrC7OhHUG3pxRtbLpr3W2dXT+Ph1SsfRZA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -8447,7 +8447,7 @@ physical-cpu-count@^2.0.0:
   resolved "https://registry.yarnpkg.com/physical-cpu-count/-/physical-cpu-count-2.0.0.tgz#18de2f97e4bf7a9551ad7511942b5496f7aba660"
   integrity sha512-rxJOljMuWtYlvREBmd6TZYanfcPhNUKtGDZBjBBS8WG1dpN2iwPsRJZgQqN/OtJuiQckdRFOfzogqJClTrsi7g==
 
-picocolors@^1.0.0, picocolors@^1.0.1:
+picocolors@^1.0.0, picocolors@^1.0.1, picocolors@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.0.tgz#5358b76a78cde483ba5cef6a9dc9671440b27d59"
   integrity sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==
@@ -8734,13 +8734,13 @@ postcss-value-parser@^4.1.0, postcss-value-parser@^4.2.0:
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
 postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.11, postcss@^8.4.24:
-  version "8.4.45"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.45.tgz#538d13d89a16ef71edbf75d895284ae06b79e603"
-  integrity sha512-7KTLTdzdZZYscUc65XmjFiB73vBhBfbPztCYdUNvlaso9PrzjzcmjqBPR0lNGkcVlcO4BjiO5rK/qNz+XAen1Q==
+  version "8.4.47"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.47.tgz#5bf6c9a010f3e724c503bf03ef7947dcb0fea365"
+  integrity sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==
   dependencies:
     nanoid "^3.3.7"
-    picocolors "^1.0.1"
-    source-map-js "^1.2.0"
+    picocolors "^1.1.0"
+    source-map-js "^1.2.1"
 
 prebuild-install@^7.1.1:
   version "7.1.2"
@@ -9782,7 +9782,7 @@ source-list-map@^2.0.0:
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
   integrity sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==
 
-source-map-js@^1.2.0:
+source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
@@ -10459,9 +10459,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 ua-parser-js@^1.0.35:
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.38.tgz#66bb0c4c0e322fe48edfe6d446df6042e62f25e2"
-  integrity sha512-Aq5ppTOfvrCMgAPneW1HfWj66Xi7XL+/mIy996R1/CLS/rcyJQm6QZdsKrUeivDFQ+Oc9Wyuwor8Ze8peEoUoQ==
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.39.tgz#bfc07f361549bf249bd8f4589a4cccec18fd2018"
+  integrity sha512-k24RCVWlEcjkdOxYmVJgeD/0a1TiSpqLg+ZalVGV9lsnr4yqu0w7tX/x2xX6G4zpkgQnRf89lxuZ1wsbjXM8lw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
