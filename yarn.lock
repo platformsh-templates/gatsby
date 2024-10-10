@@ -2050,11 +2050,18 @@
   integrity sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==
 
 "@swc/helpers@^0.4.12":
-  version "0.4.36"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.36.tgz#fcfff76ed52c214f357e8e9d3f37b568908072d9"
-  integrity sha512-5lxnyLEYFskErRPenYItLRSge5DjrJngYKdVjRSrWfza9G6KkgHEXi0vUZiyUeMU5JfXH1YnvXZzSp8ul88o2Q==
+  version "0.4.37"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.37.tgz#36c6083077fd8003e50661d2ed8a65b05b9fe86f"
+  integrity sha512-O4U8DmGtYvuWDrqmkAqhmA+sV8D3eJzvKSUgg5L5eaCCPdywZBLc97UgJT/fQaCkQ5onJzJWNojgErJk1bThaw==
   dependencies:
-    legacy-swc-helpers "npm:@swc/helpers@=0.4.14"
+    "@swc/legacy-helpers" "npm:@swc/helpers@=0.4.14"
+    tslib "^2.4.0"
+
+"@swc/legacy-helpers@npm:@swc/helpers@=0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"
+  integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
+  dependencies:
     tslib "^2.4.0"
 
 "@szmarczak/http-timer@^4.0.5":
@@ -4346,9 +4353,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.28:
-  version "1.5.34"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.34.tgz#59f6eef987d2301d96d46b1bc4da913fe784baeb"
-  integrity sha512-/TZAiChbAflBNjCg+VvstbcwAtIL/VdMFO3NgRFIzBjpvPzWOTIbbO8kNb6RwU4bt9TP7K+3KqBKw/lOU+Y+GA==
+  version "1.5.35"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.35.tgz#1d38d386186c72b1fa6e74c3a7de5f888b503100"
+  integrity sha512-hOSRInrIDm0Brzp4IHW2F/VM+638qOL2CzE0DgpnGzKW27C95IqqeqgKz/hxHGnvPxvQGpHUGD5qRVC9EZY2+A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -7126,13 +7133,6 @@ latest-version@^7.0.0:
   integrity sha512-KvNT4XqAMzdcL6ka6Tl3i2lYeFDgXNCuIX+xNx6ZMVR1dFq+idXd9FLKNMOIx0t9mJ9/HudyX4oZWXZQ0UJHeg==
   dependencies:
     package-json "^8.1.0"
-
-"legacy-swc-helpers@npm:@swc/helpers@=0.4.14":
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"
-  integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
-  dependencies:
-    tslib "^2.4.0"
 
 levn@^0.4.1:
   version "0.4.1"
