@@ -3254,9 +3254,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001718:
-  version "1.0.30001723"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001723.tgz#c4f3174f02089720736e1887eab345e09bb10944"
-  integrity sha512-1R/elMjtehrFejxwmexeXAtae5UO9iSyFn6G/I806CYC/BLyyBk1EPhrKBkWhy6wM6Xnm47dSJQec+tLJ39WHw==
+  version "1.0.30001724"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001724.tgz#312e163553dd70d2c0fb603d74810c85d8ed94a0"
+  integrity sha512-WqJo7p0TbHDOythNTqYujmaJTvtYRZrjpP8TCvH6Vb9CYJerJNKamKzIWOM4BkQatWj9H2lYulpdAQNBe7QhNA==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -4580,9 +4580,9 @@ eslint-import-resolver-node@^0.3.9:
     resolve "^1.22.4"
 
 eslint-module-utils@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.12.0.tgz#fe4cfb948d61f49203d7b08871982b65b9af0b0b"
-  integrity sha512-wALZ0HFoytlyh/1+4wuZ9FJCD/leWHQzzrxJ8+rebyReSLk7LApMyd3WJaLVoN+D5+WIdJyDK1c6JnE65V4Zyg==
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.12.1.tgz#f76d3220bfb83c057651359295ab5854eaad75ff"
+  integrity sha512-L8jSWTze7K2mTg0vos/RuLRS5soomksDPoJLXIslC7c8Wmut3bx7CPpJijDcBZtxQ5lrbUdM+s0OlNbz0DCDNw==
   dependencies:
     debug "^3.2.7"
 
@@ -5631,9 +5631,9 @@ gatsby-worker@^2.14.0:
     signal-exit "^3.0.7"
 
 gatsby@^5.11.0:
-  version "5.14.4"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.14.4.tgz#c295a72db03cbff9fe7934e1299b50daa7ae3184"
-  integrity sha512-PZFbGk7/M0E3qWHJdFt2C1tzNeOf8Ou0akMMbZ5tqbu2CZ+7pj1bHUS8jezQfhnSVcvxAJEZ+Tm+M+wtdp17kQ==
+  version "5.14.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.14.5.tgz#5066afb81b167b9d45368ba78b75cfdec7b9e212"
+  integrity sha512-j3OO6O1IrUl6jliXCZdLaT3TWgzFO6CvZE8rS0Eh/3f3S6tmv11/jfSeqXCCgKyCNOKhM2aW02rj0ffA7c0ttQ==
   dependencies:
     "@babel/code-frame" "^7.18.6"
     "@babel/core" "^7.20.12"
@@ -10659,9 +10659,9 @@ webpack-sources@^1.1.0:
     source-map "~0.6.1"
 
 webpack-sources@^3.2.3:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.3.2.tgz#0ab55ab0b380ce53c45ca40cb7b33bab3149ea85"
-  integrity sha512-ykKKus8lqlgXX/1WjudpIEjqsafjOTcOJqxnAbMLAu/KCsDCJ6GBtvscewvTkrn24HsnvFwrSCbenFrhtcCsAA==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.3.3.tgz#d4bf7f9909675d7a070ff14d0ef2a4f3c982c723"
+  integrity sha512-yd1RBzSGanHkitROoPFd6qsrxt+oFhg/129YzheDGqeustzX0vTZJZsSsQjVQC4yzBQ56K55XU8gaNCtIzOnTg==
 
 webpack-stats-plugin@^1.1.3:
   version "1.1.3"
