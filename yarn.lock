@@ -1857,9 +1857,9 @@
     nullthrows "^1.1.1"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.10":
-  version "0.5.16"
-  resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.16.tgz#36795b3d5a967032a769977780f2dcc01f4e9c4a"
-  integrity sha512-kLQc9xz6QIqd2oIYyXRUiAp79kGpFBm3fEM9ahfG1HI0WI5gdZ2OVHWdmZYnwODt7ISck+QuQ6sBPrtvUBML7Q==
+  version "0.5.17"
+  resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.17.tgz#8c2f34ca8651df74895422046e11ce5a120e7930"
+  integrity sha512-tXDyE1/jzFsHXjhRZQ3hMl0IVhYe5qula43LDWIhVfjp9G/nT5OQY5AORVOrkEGAUltBJOfOWeETbmhm6kHhuQ==
   dependencies:
     ansi-html "^0.0.9"
     core-js-pure "^3.23.3"
@@ -2117,9 +2117,9 @@
     "@types/node" "*"
 
 "@types/lodash@^4.14.92":
-  version "4.17.18"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.18.tgz#4710e7db5b3857103764bf7b7b666414e6141baf"
-  integrity sha512-KJ65INaxqxmU6EoCiJmRPZC9H9RVWCRd349tXM2M3O5NA7cY6YL7c0bHAHQ93NOfTObEQ004kd2QVHs/r0+m4g==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.19.tgz#de18c90b7891f00fed7c1273495a2f851efd99c4"
+  integrity sha512-NYqRyg/hIQrYPT9lbOeYc3kIRabJDn/k4qQHIXUpx88CBDww2fD15Sg5kbXlW86zm2XEW4g0QxkTI3/Kfkc7xQ==
 
 "@types/mdast@^3.0.0", "@types/mdast@^3.0.3":
   version "3.0.15"
@@ -4243,9 +4243,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.173:
-  version "1.5.174"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.174.tgz#c7d273755d4dc9bc4f1d192f6f2092bee42771f3"
-  integrity sha512-HE43yYdUUiJVjewV2A9EP8o89Kb4AqMKplMQP2IxEPUws1Etu/ZkdsgUDabUZ/WmbP4ZbvJDOcunvbBUPPIfmw==
+  version "1.5.175"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.175.tgz#669d3cdacf48b91e234886a98df8f4dfd081dd22"
+  integrity sha512-Nqpef9mOVo7pZfl9NIUhj7tgtRTsMzCzRTJDP1ccim4Wb4YHOz3Le87uxeZq68OCNwau2iQ/X7UwdAZ3ReOkmg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -8024,9 +8024,9 @@ optionator@^0.9.1:
     word-wrap "^1.2.5"
 
 ordered-binary@^1.2.4:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.5.3.tgz#8bee2aa7a82c3439caeb1e80c272fd4cf51170fb"
-  integrity sha512-oGFr3T+pYdTGJ+YFEILMpS3es+GiIbs9h/XQrclBXUtd44ey7XwfsMzM31f64I1SQOawDoDr/D823kNCADI8TA==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.6.0.tgz#9c490dadc0b1336ca6917d8d41dd474b8c0bff32"
+  integrity sha512-IQh2aMfMIDbPjI/8a3Edr+PiOpcsB7yo8NdW7aHWVaoR/pcDldunMvnnwbk/auPGqmKeAdxtZl7MHX/QmPwhvQ==
 
 os-tmpdir@~1.0.2:
   version "1.0.2"
