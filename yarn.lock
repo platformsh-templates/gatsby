@@ -2153,9 +2153,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "19.1.13"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.13.tgz#fc650ffa680d739a25a530f5d7ebe00cdd771883"
-  integrity sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ==
+  version "19.1.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.14.tgz#154e157c014cb02b90201250b009ecad28fbad9f"
+  integrity sha512-ukd93VGzaNPMAUPy0gRDSC57UuQbnH9Kussp7HBjM06YFi9uZTFhOvMSO2OKqXm1rSgzOE+pVx1k1PYHGwlc8Q==
   dependencies:
     csstype "^3.0.2"
 
@@ -2794,9 +2794,9 @@ axobject-query@^4.1.0:
   integrity sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==
 
 b4a@^1.6.4:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.7.2.tgz#aefbe7aaf52fe53c3270f87cf72c33c61bc3174b"
-  integrity sha512-DyUOdz+E8R6+sruDpQNOaV0y/dBbV6X/8ZkxrDcR0Ifc3BgKlpgG0VAtfOozA0eMtJO5GGe9FsZhueLs00pTww==
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.7.3.tgz#24cf7ccda28f5465b66aec2bac69e32809bf112f"
+  integrity sha512-5Q2mfq2WfGuFp3uS//0s6baOJLMoVduPYVeNmDYxu5OUA1/cBfvr2RIS7vi62LdNj/urk1hfmj867I3qt6uZ7Q==
 
 babel-jsx-utils@^1.1.0:
   version "1.1.0"
