@@ -4211,9 +4211,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.249:
-  version "1.5.261"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.261.tgz#461c28a49ae06866e171068565b66cd314678b7c"
-  integrity sha512-cmyHEWFqEt3ICUNF93ShneOF47DHoSDbLb7E/AonsWcbzg95N+kPXeLNfkdzgTT/vEUcoW76fxbLBkeYtfoM8A==
+  version "1.5.262"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.262.tgz#c31eed591c6628908451c9ca0f0758ed514aa003"
+  integrity sha512-NlAsMteRHek05jRUxUR0a5jpjYq9ykk6+kO0yRaMi5moe7u0fVIOeQ3Y30A8dIiWFBNUoQGi1ljb1i5VtS9WQQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4310,9 +4310,9 @@ entities@^6.0.0:
   integrity sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==
 
 envinfo@^7.10.0:
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.20.0.tgz#3fd9de69fb6af3e777a017dfa033676368d67dd7"
-  integrity sha512-+zUomDcLXsVkQ37vUqWBvQwLaLlj8eZPSi61llaEFAVBY5mhcXdaSw1pSJVl4yTYD5g/gEfpNl28YYk4IPvrrg==
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.21.0.tgz#04a251be79f92548541f37d13c8b6f22940c3bae"
+  integrity sha512-Lw7I8Zp5YKHFCXL7+Dz95g4CcbMEpgvqZNNq3AmlT5XAV6CgAAk6gyAMqn2zjw08K9BHfcNuKrMiCPLByGafow==
 
 error-ex@^1.3.1:
   version "1.3.4"
