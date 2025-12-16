@@ -2484,9 +2484,9 @@ ajv@^8.0.0, ajv@^8.0.1, ajv@^8.9.0:
     require-from-string "^2.0.2"
 
 anser@^2.1.1:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/anser/-/anser-2.3.3.tgz#84bca8b8a668ae3c7cf49355affb99494444ccc1"
-  integrity sha512-QGY1oxYE7/kkeNmbtY/2ZjQ07BCG3zYdz+k/+sf69kMzEIxb93guHkPnIXITQ+BYi61oQwG74twMOX1tD4aesg==
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/anser/-/anser-2.3.5.tgz#3435896b68b93e5e744842499d0ce3e6f6d013ee"
+  integrity sha512-vcZjxvvVoxTeR5XBNJB38oTu/7eDCZlwdz32N1eNgpyPF7j/Z7Idf+CUwQOkKKpJ7RJyjxgLHCM7vdIK0iCNMQ==
 
 ansi-align@^3.0.0:
   version "3.0.1"
