@@ -1364,9 +1364,9 @@
   integrity sha512-sxQE460fPZyU3sdc8lafxiPwJHBzZRy/udNFynGQky1SePYBdhkBl1kOagA9uT3pxR8K09bOrmTUqA9wb/PjSQ==
 
 "@lezer/lr@^1.0.0":
-  version "1.4.9"
-  resolved "https://registry.yarnpkg.com/@lezer/lr/-/lr-1.4.9.tgz#47bd289b55e0e94616d568e476f55a8d3ca0dcd3"
-  integrity sha512-mF6irshW4nRJEhdR0HOAxxTDGss+rQFqA0nLRlZsPh14q+DB9Fqp0YbOvyRSOeKPLfUL/w5wPQAcETvkQ1VApg==
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/@lezer/lr/-/lr-1.4.10.tgz#b3acc36e5ad049b74ddb7719594e7e74d9161ff5"
+  integrity sha512-rnCpTIBafOx4mRp43xOxDJbFipJm/c0cia/V5TiGlhmMa+wsSdoGmUN3w5Bqrks/09Q/D4tNAmWaT8p6NRi77A==
   dependencies:
     "@lezer/common" "^1.0.0"
 
@@ -2959,9 +2959,9 @@ bare-stream@^2.6.4:
     teex "^1.0.1"
 
 bare-url@^2.2.2:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/bare-url/-/bare-url-2.4.0.tgz#1546d63057917189cab9b24629e946e1e8f7af31"
-  integrity sha512-NSTU5WN+fy/L0DDenfE8SXQna4voXuW0FHM7wH8i3/q9khUSchfPbPezO4zSFMnDGIf9YE+mt/RWhZgNRKRIXA==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/bare-url/-/bare-url-2.4.1.tgz#4a0c69018f1850f713746bd05464944cc9b0ed66"
+  integrity sha512-fZapLWNB25gS+etK27NV9KgBNXgo2yeYHuj+OyPblQd6GYAE3JVy6aKxszMV5jhGGFwraXQKA5fldvf3lMyEqw==
   dependencies:
     bare-path "^3.0.0"
 
@@ -2983,9 +2983,9 @@ base64id@2.0.0, base64id@~2.0.0:
   integrity sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog==
 
 baseline-browser-mapping@^2.10.12:
-  version "2.10.19"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.19.tgz#7697721c22f94f66195d0c34299b1a91e3299493"
-  integrity sha512-qCkNLi2sfBOn8XhZQ0FXsT1Ki/Yo5P90hrkRamVFRS7/KV9hpfA4HkoWNU152+8w0zPjnxo5psx5NL3PSGgv5g==
+  version "2.10.20"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.20.tgz#7c99b86d43ae9be3810cac515f4675802e1f6b87"
+  integrity sha512-1AaXxEPfXT+GvTBJFuy4yXVHWJBXa4OdbIebGN/wX5DlsIkU0+wzGnd2lOzokSk51d5LUmqjgBLRLlypLUqInQ==
 
 better-opn@^2.1.1:
   version "2.1.1"
